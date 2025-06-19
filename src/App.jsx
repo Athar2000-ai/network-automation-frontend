@@ -5,7 +5,7 @@ function App() {
   const [backendMessage, setBackendMessage] = useState("Connecting...");
 
   useEffect(() => {
-    axios.get("https://your-backend-url/ping")  // <-- Replace with deployed backend URL
+    axios.get("https://network-automation-backend-production.up.railway.app")  // <-- Replace with deployed backend URL
       .then(res => {
         console.log("Backend says:", res.data);
         setBackendMessage(res.data.message);
